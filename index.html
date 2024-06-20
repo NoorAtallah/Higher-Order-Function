@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //for method 
+        function powerOfTwo(arr) {
+  const result = [];
+  for (let i = 0; i < arr.length; i++) {
+    result.push(Math.pow(2, arr[i]));
+  }
+  return result;
+}
+
+console.log(powerOfTwo([1, 2, 3]));
+
+//foreach method 
+function powerOfTwo(arr) {
+  const result = [];
+  arr.forEach(element => {
+    result.push(Math.pow(2, element));
+  });
+  return result;
+}
+
+console.log(powerOfTwo([1, 2, 3])); 
+
+
+//map method
+function powerOfTwo(arr) {
+  return arr.map(element => Math.pow(2, element));
+}
+
+console.log(powerOfTwo([1, 2, 3]));
+
+//Q2
+function evenOrOdd(arr) {
+  return arr.map(function(element) {
+    if (typeof element !== 'number') {
+      return 'N/A';
+    } else if (element % 2 === 0) {
+      return 'even';
+    } else {
+      return 'odd';
+    }
+  });
+}
+console.log(evenOrOdd([1, 2, 3, "Rawan"]));
+
+//Q3 
+const names = ["Rawan", "Wesam", "Hind", "Muhammad", "Esraa", "Dareen"];
+
+console.log("Using forEach:");
+names.forEach(name => {
+  console.log(name);
+});
+
+
+//Q4
+function fizzbuzz(numbers) {
+  const output = [];
+
+  numbers.forEach(num => {
+    if (num % 3 === 0 && num % 5 === 0) {
+      output.push("Fizz Buzz");
+    } else if (num % 3 === 0) {
+      output.push("Fizz");
+    } else if (num % 5 === 0) {
+      output.push("Buzz");
+    } else {
+      output.push(num);
+    }
+  });
+
+  return output;
+}
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20];
+const result = fizzbuzz(numbers);
+console.log(result);
+    </script>
+</body>
+</html>
